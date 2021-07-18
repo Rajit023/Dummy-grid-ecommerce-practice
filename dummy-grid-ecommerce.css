@@ -1,0 +1,143 @@
+body{
+    font-size: 30px;
+    box-sizing: border-box;
+
+}
+
+.wrapper{
+    display: grid;
+    gap:0.3rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "title title title"
+    "banner banner bb1"
+    "banner banner bb2"
+    "sidemenu main main"
+    "tags main main"
+    "recent main main"
+    "footer footer footer"
+    ;
+}
+
+.wrapper >*{
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+/*
+.wrapper > div {
+    background: grey;
+}
+*/
+.header{
+    grid-area: header;
+    background: black;
+    color: white;
+}
+.title{
+    grid-area: title;
+    background: red;
+
+}
+.banner{
+    grid-area: banner;
+    background: radial-gradient(red,yellow,blue)
+
+}
+.banner-box-1{
+    grid-area: bb1;
+    background: green;
+}
+.banner-box-2{
+    grid-area: bb2;
+    background: greenyellow;
+
+}
+.side-menu{
+    grid-area: sidemenu;
+    background: linear-gradient(pink, purple);
+
+}
+.tags{
+    grid-area: tags;
+    background: yellow;
+
+}
+
+.recent{
+    grid-area: recent;
+    background: brown;
+
+}
+.main{
+    grid-area: main;
+   
+}
+.footer{
+    grid-area: footer;
+    background: black;
+    color: white;
+}
+.main{
+    display: flex;
+    flex-flow:row wrap;
+}
+
+.main > div{
+    min-width: 200px;
+    min-height: 200px;
+    background: blueviolet;
+    margin: 2rem;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: -15px 13px 5px grey;
+}
+
+
+/*media quries */
+/* for ipad */
+@media (max-width:768px){
+    .wrapper{
+        display: grid;
+        gap:0.3rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "title title"
+        "banner banner"
+        "bb1 bb2"
+        "sidemenu sidemenu"
+        "tags recent"
+        "main main"
+        "footer footer"
+        ;
+    }
+} 
+   
+/* small screen mobile */
+@media (max-width:576px){
+    .wrapper{
+        display: grid;
+        gap:0.3rem;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "header "
+        "title "
+        "banner "
+        "bb1"
+        "bb2"
+        "sidemenu "
+        "tags"
+        "recent"
+        "main"
+        "footer"
+        ;
+    }
+
+
+}
